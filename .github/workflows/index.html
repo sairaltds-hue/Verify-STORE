@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifyStore - SSN Numberপ্রিমিয়াম সার্ভিস</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Baloo Da 2 (Stylish Bengali Font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'bengali': ['"Baloo Da 2"', 'sans-serif'],
+                    },
+                    colors: {
+                        'theme-main': '#1D4ED8', // Primary Blue (Trust)
+                        'theme-accent': '#059669', // Teal/Green (Verified/Success)
+                        'theme-bg': '#f8fafc',
+                    },
+                    boxShadow: {
+                        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Baloo Da 2', sans-serif;
+            background-color: #f8fafc;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the fixed CTA button on mobile */
+        @media (max-width: 768px) {
+            .mobile-cta-fixed {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 1rem;
+                background-color: white;
+                box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+        }
+        /* Custom Keyframe for subtle pulsate on CTA */
+        @keyframes pulsate {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(29, 78, 216, 0.7); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(29, 78, 216, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(29, 78, 216, 0); }
+        }
+        .cta-pulsate {
+            animation: pulsate 2s infinite;
+        }
+    </style>
+</head>
+<body class="font-bengali text-gray-800 antialiased">
+
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Placeholder SVG -->
+                <svg class="w-10 h-10 text-theme-main fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99l-2.47-2.47 1.41-1.41 1.06 1.06 3.54-3.54 1.41 1.41-4.95 4.95z"/>
+                </svg>
+                <h1 class="text-3xl font-extrabold text-theme-main tracking-tight">VerifyStore</h1>
+            </div>
+            <a href="#buy-section" class="hidden md:inline-block text-lg font-semibold text-theme-accent hover:text-theme-main transition duration-300 border-b-2 border-theme-accent/50">
+                পরিষেবা মূল্য
+            </a>
+        </div>
+    </header>
+
+
+    <!-- Hero Section (Product Focus) -->
+    <section class="bg-theme-main/5 py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <span class="text-sm font-semibold uppercase tracking-widest text-theme-accent bg-theme-accent/10 py-1 px-3 rounded-full mb-3 inline-block">
+                ১০০% যাচাইকৃত ও নিরাপদ
+            </span>
+            <h2 class="text-5xl md:text-6xl font-extrabold text-theme-main mb-6 leading-tight">
+                আপনার ভার্চুয়াল পরিচয়ের সমাধান: <br class="hidden md:block"> প্রিমিয়াম SSN Numberপরিষেবা
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                SSN Numberপরিচয়ের জন্য অত্যন্ত গুরুত্বপূর্ণ একটি, যা বিভিন্ন সরকারি সেবা এবং আর্থিক সুযোগ-সুবিধা পেতে সহায়ক। VerifyStore দিচ্ছে সর্বোচ্চ মান ও নিরাপত্তার নিশ্চয়তা।
+            </p>
+            <!-- Scroll to CTA Button for Desktop -->
+            <a href="#buy-section" class="hidden md:inline-block py-3 px-8 text-lg font-semibold rounded-full 
+               bg-theme-accent text-white shadow-lg hover:shadow-xl hover:bg-theme-accent/90 transition duration-300">
+                মূল্য এবং অফার দেখুন
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Key Benefits Section -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                SSN Numberকেনার মূল সুবিধাসমূহ
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit Card 1 -->
+                <div class="p-6 bg-theme-bg rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-theme-main">
+                    <div class="text-4xl text-theme-main mb-4">🛡️</div>
+                    <h4 class="text-xl font-bold mb-2">পূর্ণাঙ্গ যাচাইকরণ</h4>
+                    <p class="text-gray-600">১০০% যাচাইকৃত মার্কিন SSN ডকুমেন্টেশন সহ সর্বোচ্চ মানের নিশ্চয়তা।</p>
+                </div>
+                <!-- Benefit Card 2 -->
+                <div class="p-6 bg-theme-bg rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-theme-main">
+                    <div class="text-4xl text-theme-main mb-4">✅</div>
+                    <h4 class="text-xl font-bold mb-2">প্রতিস্থাপন গ্যারান্টি</h4>
+                    <p class="text-gray-600">যদি কোনো সমস্যা হয়, পরিষেবার প্রতিস্থাপন নিশ্চিত এবং সম্পূর্ণ টাকা ফেরত গ্যারান্টি।</p>
+                </div>
+                <!-- Benefit Card 3 -->
+                <div class="p-6 bg-theme-bg rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-theme-main">
+                    <div class="text-4xl text-theme-main mb-4">💰</div>
+                    <h4 class="text-xl font-bold mb-2">সবচেয়ে সস্তা মূল্য</h4>
+                    <p class="text-gray-600">প্রতিযোগিতামূলক বাজারের তুলনায় সবচেয়ে সস্তা মূল্যে আমাদের পরিষেবাগুলি উপলব্ধ।</p>
+                </div>
+            </div>
+
+
+            <!-- Detailed Features Grid -->
+            <div class="mt-12 border-t pt-8">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">১০+ বছরের অভিজ্ঞতা</div>
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">সম্পূর্ণ আকারের প্রোফাইল</div>
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">অনন্য ৯-সংখ্যার SSN</div>
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">বিশ্বব্যাপী কভারেজ</div>
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">পূর্ণ নাম ও জন্ম তারিখ</div>
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">পূর্ণ ঠিকানা তথ্য</div>
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">২৪/৭ কাস্টমার সাপোর্ট</div>
+                    <div class="p-4 rounded-lg bg-theme-main/10 font-semibold text-theme-main">১০০% নিরাপদ সেবা</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Buy Now CTA Section (The Core Product Card with Pricing) -->
+    <section id="buy-section" class="py-16 md:py-20 bg-theme-main/90">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            
+            <div class="bg-white rounded-3xl shadow-3xl p-6 md:p-10 transform -translate-y-10 border-b-8 border-theme-accent">
+                <h3 class="text-4xl font-extrabold text-theme-main mb-3">
+                    এখনই সিদ্ধান্ত নিন ও অফারটি নিন
+                </h3>
+                <p class="text-xl text-gray-600 mb-8">
+                    আপনার পরিচয় ও আর্থিক লেনদেনের জন্য বিশ্বস্ত ও কম মূল্যের সমাধান পেতে আর অপেক্ষা করবেন না।
+                </p>
+
+
+                <!-- Pricing Callout (Updated with BDT and Offer) -->
+                <div class="bg-theme-bg p-6 rounded-xl mb-8 border-2 border-theme-accent">
+                    <p class="text-xl font-bold text-gray-800 mb-2">স্ট্যান্ডার্ড একক মূল্য:</p>
+                    <p class="text-3xl font-extrabold text-gray-500 line-through mb-4">
+                        $2.80 (প্রায় ৳280)
+                    </p>
+                    <p class="text-xl font-bold text-theme-main mb-3 border-t pt-3 border-gray-300">
+                        প্রিমিয়াম বাল্ক অফার (সীমিত সময়ের জন্য):
+                    </p>
+                    <p class="text-5xl font-extrabold text-theme-accent mt-1">
+                        ৳1200
+                    </p>
+                    <p class="text-lg text-gray-600 mt-1">
+                        (১০ পিস অর্ডার করলে - মাত্র ৳120 প্রতি পিস)
+                    </p>
+                </div>
+
+
+                <!-- Guarantee Note -->
+                <div class="bg-red-50 border-2 border-red-400 p-4 rounded-xl mb-6 text-center shadow-md">
+                    <p class="text-xl font-bold text-red-600 mb-1">🔥 নিরাপত্তা ও প্রতিস্থাপন গ্যারান্টি 🔥</p>
+                    <p class="text-lg text-gray-700">
+                        কোনো SSN Numberনম্বর কাজ হয়নি বা ভুল প্রমাণ করতে পারলে, সঙ্গে সঙ্গে **রিপ্লেস** করে দেওয়া হবে!
+                    </p>
+                </div>
+                
+                <!-- Stylish Buy Now Button -->
+                <button id="buyNowButtonDesktop" 
+                        class="w-full py-5 text-2xl font-bold rounded-2xl 
+                                bg-gradient-to-r from-theme-main to-theme-accent text-white 
+                                shadow-2xl shadow-theme-main/50 transform transition duration-500 ease-in-out 
+                                hover:from-theme-accent hover:to-theme-main hover:scale-[1.03] hover:shadow-theme-accent/50 
+                                active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-theme-accent cta-pulsate">
+                    ৳1200 দিয়ে এখনই কিনুন <span class="ml-3 text-3xl">&#8680;</span> <!-- Double Right Arrow -->
+                </button>
+            </div>
+            
+            <p class="mt-4 text-white/80 text-sm">
+                ক্লিক করলেই টেলিগ্রামে VerifyStore-এর সাথে যোগাযোগ শুরু হবে।
+            </p>
+        </div>
+    </section>
+    
+    <!-- Testimonial Section (Trust Building) -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                আমাদের সন্তুষ্ট গ্রাহকদের মতামত
+            </h3>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="p-8 bg-theme-bg rounded-xl shadow-xl border-l-4 border-theme-accent">
+                    <p class="italic text-gray-700 text-lg mb-4">
+                        "অসাধারণ পরিষেবা! মাত্র কয়েক মিনিটের মধ্যে SSN Numberহাতে পেয়ে গেলাম। তাদের গ্রাহক সহযোগিতা সত্যি প্রশংসার যোগ্য। এত কম দামে এমন মানসম্মত সেবা আশা করিনি।"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-theme-main/30 rounded-full mr-3 flex items-center justify-center font-bold text-theme-main">A</div>
+                        <div>
+                            <p class="font-semibold text-gray-800">আমিনুল হক</p>
+                            <p class="text-sm text-gray-500">ঢাকা, বাংলাদেশ</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="p-8 bg-theme-bg rounded-xl shadow-xl border-l-4 border-theme-accent">
+                    <p class="italic text-gray-700 text-lg mb-4">
+                        "আমি প্রথমে কিছুটা দ্বিধায় ছিলাম, কিন্তু VerifyStore সম্পূর্ণ প্রক্রিয়াটি অত্যন্ত পেশাদারিত্বের সাথে সম্পন্ন করেছে। ১০০% সুরক্ষিত এবং যাচাইকৃত তথ্য পেয়েছি। ধন্যবাদ!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-theme-main/30 rounded-full mr-3 flex items-center justify-center font-bold text-theme-main">M</div>
+                        <div>
+                            <p class="font-semibold text-gray-800">মাসুদ রানা</p>
+                            <p class="text-sm text-gray-500">দুবাই, সংযুক্ত আরব আমিরাত</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section (Addressing Concerns) -->
+    <section class="py-16 md:py-20 bg-theme-main/5">
+        <div class="max-w-5xl mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center text-gray-800 mb-12">
+                প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQ)
+            </h3>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-5 rounded-lg shadow border border-gray-200">
+                    <h4 class="text-lg font-bold text-theme-main mb-2">SSN Numberকি ১০০% যাচাইকৃত?</h4>
+                    <p class="text-gray-600">হ্যাঁ, আমরা কেবল মূল এবং ১০০% যাচাইকৃত মার্কিন SSN ডকুমেন্টেশন সরবরাহ করি। আমরা নিরাপত্তার বিষয়ে কোনো আপস করি না।</p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-5 rounded-lg shadow border border-gray-200">
+                    <h4 class="text-lg font-bold text-theme-main mb-2">প্রতিস্থাপন গ্যারান্টি কিভাবে কাজ করে?</h4>
+                    <p class="text-gray-600">যদি কোনো নম্বর কাজ না করে বা ভুল প্রমাণ হয়, তবে আমরা অবিলম্বে রিপ্লেস করে দেব। এই বিষয়ে সম্পূর্ণ নিশ্চয়তা রয়েছে।</p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-5 rounded-lg shadow border border-gray-200">
+                    <h4 class="text-lg font-bold text-theme-main mb-2">টাকা ফেরত গ্যারান্টি কিভাবে কাজ করে?</h4>
+                    <p class="text-gray-600">আমরা যদি প্রতিশ্রুতি অনুযায়ী পরিষেবা প্রদান করতে ব্যর্থ হই অথবা আপনি কোনো সমস্যায় পড়েন, তাহলে আমরা সম্পূর্ণ টাকা ফেরত বা প্রতিস্থাপনের নিশ্চয়তা দিই।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Fixed Mobile CTA (Hidden on Desktop) -->
+    <div class="mobile-cta-fixed md:hidden">
+        <button id="buyNowButtonMobile"
+                class="w-full py-4 text-xl font-bold rounded-xl 
+                       bg-gradient-to-r from-theme-main to-theme-accent text-white 
+                       shadow-xl shadow-theme-main/50 transform transition duration-300 
+                       hover:scale-[1.01] active:scale-[0.99] focus:outline-none">
+            ৳1200 দিয়ে এখনই কিনুন (Telegram)
+        </button>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 text-center text-gray-400 text-sm mt-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-lg font-bold text-white mb-2">VerifyStore</p>
+            <p>&copy; <span id="currentYear"></span>. সর্বস্বত্ব সংরক্ষিত।</p>
+            <p class="mt-2 text-xs">আমাদের টেলিগ্রাম চ্যানেলে যুক্ত হন: <a href="https://t.me/VerifyST0RE" target="_blank" class="text-theme-accent hover:text-white transition duration-300">https://t.me/VerifyST0RE</a></p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Button Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Get button elements
+            const telegramLink = 'https://t.me/VerifyST0RE';
+            
+            const buyNowButtonDesktop = document.getElementById('buyNowButtonDesktop');
+            const buyNowButtonMobile = document.getElementById('buyNowButtonMobile');
+
+
+            // Function to handle redirection
+            const redirectToTelegram = () => {
+                window.open(telegramLink, '_blank');
+                console.log('Redirecting to Telegram: ' + telegramLink);
+            };
+
+
+            // Add click event listeners
+            if (buyNowButtonDesktop) {
+                buyNowButtonDesktop.addEventListener('click', redirectToTelegram);
+            }
+            if (buyNowButtonMobile) {
+                buyNowButtonMobile.addEventListener('click', redirectToTelegram);
+            }
+        });
+    </script>
+</body>
+</html>
